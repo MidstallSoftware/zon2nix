@@ -25,13 +25,14 @@
 
       perSystem = { lib, pkgs, ... }:
         let
+          zig = pkgs.zig_0_12;
+
           inherit (lib)
             getExe
             ;
           inherit (pkgs)
             nix
             stdenv
-            zig
             ;
         in
         {
